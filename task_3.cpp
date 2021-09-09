@@ -10,19 +10,29 @@ int main()
     float b;
     float c;
     cin >> a >> b >> c;
-    float discriminant = b * b - 4 * a * c;
-    if (discriminant < 0) cout << "No solution" << endl;
+    if (a == 0 && b != 0) cout << -c / b << endl;
     else
     {
-        if (discriminant == 0) cout << "Solution is " << (-b) / (2 * a) << endl;
+        if (a == 0 and b == 0) cout << "No solution" << endl;
         else
         {
-            discriminant = sqrt(discriminant);
-            cout << "First solution is " << (-b + discriminant) / (2.0 * a) << endl;
-            cout << "Second solution is " << (-b - discriminant) / (2.0 * a) << endl;
+            float discriminant = b * b - 4 * a * c;
+            if (discriminant < 0) cout << "No solution" << endl;
+            else
+            {
+                if (discriminant == 0) cout << "Solution is " << (-b) / (2 * a) << endl;
+                else
+                {
+                    discriminant = sqrt(discriminant);
+                    cout << "First solution is " << (-b + discriminant) / (2.0 * a) << endl;
+                    cout << "Second solution is " << (-b - discriminant) / (2.0 * a) << endl;
+                }
+            }
         }
     }
-    
 
-    return 0;
+
+
+
+ return 0;
 }
