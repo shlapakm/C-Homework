@@ -18,21 +18,15 @@ int main()
     if (now != 1)
     {
         value = value * 8.0;
-        while (now > 2)
-        {
+        for (now; now > 2; now--)
             value *= mult;
-            now -= 1;
-        }
     }
     //translate our information to future value
     if (future != 1)
     {
         value /= 8.0;
-        while (future > 2)
-        {
+        for (future; future > 2; future--)
             value /= mult;
-            future -= 1;
-        }
     }
     cout << "Our new value is " << value << endl;
     return 0;
