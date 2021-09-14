@@ -15,8 +15,8 @@ int main()
         cin >>  value;
         OriginalArray.push_back(value);
     }
-    for (int i = 1; i < n; i++) //массив из одного элемента отсортирован
-        for (int j = i; j > 0 && OriginalArray[j - 1] > OriginalArray[j]; j--) // пока j>0 и элемент j-1 > j
+    for (int i = 1; i < n; i++) 
+        for (int j = i; j > 0 && OriginalArray[j - 1] > OriginalArray[j]; j--) 
             swap(OriginalArray[j - 1], OriginalArray[j]);
     cout << "Sorted array:" << endl;
         for (int i = 0; i < n; i++)
