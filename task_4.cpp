@@ -1,3 +1,4 @@
+
 #include <string>
 #include <vector>
 #include <functional>
@@ -10,7 +11,7 @@ double calculation(double a, double b, std::function<double(double, double)> f)
 int main()
 {
 	std::vector< std::function<double(double, double)>> calc;
-	std::function<double(double,double)> Sum = [](double x, double y) { return x + y; };
+	std::function<double(double, double)> Sum = [](double x, double y) { return x + y; };
 	calc.push_back(Sum);
 	std::function<double(double, double)> Diff = [](double x, double y) { return x - y; };
 	calc.push_back(Diff);
@@ -20,9 +21,9 @@ int main()
 	double a, b;
 	std::cin >> a;
 	std::cin >> b;
-	for (int i = 0; i < calc.size(); i++)
+	for (auto i : calc)
 	{
-		std::cout << calculation(a, b, calc[i]) << std::endl;
+		std::cout << calculation(a, b, i) << std::endl;
 	}
 	return 0;
 }
