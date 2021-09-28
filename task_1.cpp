@@ -5,7 +5,9 @@ int main()
 {
 	using namespace std;
 	int n;
+	cout << "Enter a natural number" << endl;
 	cin >> n;
+	cout << "The Fibonacci number with the entered number: ";
 	cout << Fibbonachi(n) << endl;
 }
 int Fibbonachi(int n)
