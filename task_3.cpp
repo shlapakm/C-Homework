@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -9,14 +8,9 @@ int main()
     cout << "Enter the number of array elements." << endl;
     int n;
     cin >> n;
-    vector <int> originalArray{ n };
+    vector <double> originalArray(n);
     cout << "Enter the values of the array elements separated by a space." << endl;
-    for (int i = 0; i < n; i++)
-    {
-        double value;
-        cin >> value;
-        originalArray[i] = value;
-    }
+    for (auto& i : originalArray) cin >> i;
     sort(originalArray.begin(), originalArray.end(), [](double i, double j) {return (i < j); });
     cout << "Our sorted array in ascending order array: " << " ";
     for (auto i : originalArray)
@@ -28,3 +22,4 @@ int main()
         cout << i << " ";
     return 0;
 }
+
