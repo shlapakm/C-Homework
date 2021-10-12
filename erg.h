@@ -1,5 +1,4 @@
 
-#include <iostream>
 class Erg {
 	static double jouleToErg = 10000000;
 private:
