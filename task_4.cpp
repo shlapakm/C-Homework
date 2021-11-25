@@ -19,7 +19,7 @@ constexpr long long int next_prime(long long int n)
 
 constexpr long long int prime(long long int n)
 {
-	return (n == 1) ? 2 : next_prime(prime(n - 1));
+	return (n == 1) ? 2 : (n<1) ? -1 : next_prime(prime(n - 1));
 }
 
 int main()
